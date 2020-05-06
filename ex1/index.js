@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-const port = 3000;
+const port = 3001;
 app.set('port', port);
 
 const server = http.createServer(app);
