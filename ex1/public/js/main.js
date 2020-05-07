@@ -14,7 +14,6 @@ function init() {
   });
 
   getWeatherData('forecast').then((jsonResponse) => {
-    console.log(jsonResponse);
     displayForecastWeather(jsonResponse);
   }).catch((err) => {
     console.log(err);
