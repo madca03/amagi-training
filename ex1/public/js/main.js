@@ -14,6 +14,7 @@ function init() {
   });
 
   getWeatherData('forecast').then((jsonResponse) => {
+    console.log(jsonResponse);
     displayForecastWeather(jsonResponse);
   }).catch((err) => {
     console.log(err);
@@ -145,7 +146,7 @@ function displayForecastItemInfoRight(item, trTag) {
   tdTag.append(spanTag);
 
   let iTag = document.createElement('i');
-  iTag.innerText = "clear sky";
+  iTag.innerText = `${item.weather[0].description}`;
   tdTag.append(iTag);
 
   const windSpeed = item.wind.speed;
