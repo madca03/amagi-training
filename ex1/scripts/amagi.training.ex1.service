@@ -1,0 +1,10 @@
+[Unit]
+Description=Exercise 1 of Amagi training
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/bin/sh /usr/local/bin/run_amagi_training_ex1_app.sh
+
+[Install]
+WantedBy=multi-user.target
